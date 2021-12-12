@@ -1,4 +1,4 @@
-#Aufgabe2 Slicing
+#Aufgabe 1.2 Slicing
 liste = list(range(101))
 print(liste)
 

@@ -1,5 +1,5 @@
+# !/usr/bin/env python3
 #Aufgabe 1.4 (Funktionen, Strings)
-#PCTest2
 
 def devocalize(s):
     "Entferne Vokale aus einem String"

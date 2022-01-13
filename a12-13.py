@@ -1,3 +1,5 @@
+# !/usr/bin/env python3
+
 #Aufgabe 1.2 Slicing
 liste = list(range(101))
 print(liste)

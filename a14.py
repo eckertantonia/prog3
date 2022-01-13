@@ -1,5 +1,5 @@
 #Aufgabe 1.4 (Funktionen, Strings)
-#PCTest
+#PCTest2
 
 def devocalize(s):
     "Entferne Vokale aus einem String"

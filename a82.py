@@ -18,6 +18,11 @@ def ggT(x,y):
         x, y = y, x%y
     return x
 
+def ggTl(x, y, *z):
+    ergebnis = ggT(x, y)
+    for zahl in z:
+        ergebnis = ggT(ergebnis, zahl)
+    return ergebnis
 
 ggtListe = list(open("ggtbeispiele.txt"))
 
@@ -29,3 +34,6 @@ for ggt in ggtListe:
     if(newggt != int(inhalt[2])):
         print(ggt, newggt)
 
+print(ggTl(10, 80, 20, 75))
+print(ggTl(17,4))
+print(ggTl(7,2,2,1,20,11))

@@ -14,7 +14,23 @@ void java2html(const char *jstring, char *htmlstring);
 
 void java2html(const char *jstring, char *htmlstring) {
     /* Ihre Loesung */
+    int i = 0;
+    int len = strlen(jstring);
+    char c, low;
     
+
+    for(i = 0; i < len; i++){
+        c = jstring[i];
+        if(isupper(c)){
+            low = tolower(c);
+            strcat(htmlstring, '-');
+            strcat(htmlstring, &low);
+        } else {
+            strcat(htmlstring, &c);
+        }
+        printf("%s", htmlstring);
+        printf("\n");
+    }
     
     
 }

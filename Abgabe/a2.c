@@ -17,21 +17,22 @@ void java2html(const char *jstring, char *htmlstring) {
     int i = 0;
     int len = strlen(jstring);
     char c, low;
+    char hype = '-';
     
 
     for(i = 0; i < len; i++){
         c = jstring[i];
         if(isupper(c)){
             low = tolower(c);
-            strcat(htmlstring, '-');
-            strcat(htmlstring, &low);
+            strcat(htmlstring, &hype);
+            /*strcat(htmlstring, &low);*/
         } else {
             strcat(htmlstring, &c);
         }
-        printf("%s", htmlstring);
-        printf("\n");
+        
     }
-    
+    printf("%s", htmlstring);
+    printf("\n");
     
 }
 

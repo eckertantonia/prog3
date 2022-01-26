@@ -1,4 +1,4 @@
 
 Programmieren 3 (WS21/22)
 
-Aufgaben in Python
+Aufgaben zum Python Lernen

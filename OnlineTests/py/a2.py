@@ -45,15 +45,32 @@ class Obstsalat:
             newObst.zutaten[obstVar.name]+= obstVar.zutaten.get(obstVar.name) 
         else:
             names.append(obstVar.name)
-            
-
             newObst.zutaten.update(obstVar.zutaten)
         newObst.gewicht += obstVar.gewicht
+        # ValueException Error, wenn gewicht goesser 17
+        if(newObst.gewicht>17):
+            raise ValueError
         names.sort()
         newObst.name = "-".join(names)
 
         return newObst
-        
+
+    def __lt__(self, other):
+
+        if self.name < other.name:
+            return (self.name, self.gewicht) < (other.name, other.gewicht)
+        elif self.gewicht < other.gewicht:
+            return (self.name, self.gewicht) < (other.name, other.gewicht)
+        """ if self.name > other.name:
+            return (other.name, other.gewicht) < (self.name, self.gewicht)
+        elif self.name < other.name:
+            return (self.name, self.gewicht) < (other.name, other.gewicht)
+        else:
+            if self.gewicht > other.gewicht:
+                return (other.name, other.gewicht) < (self.name, self.gewicht)
+            else:
+                return (self.name, self.gewicht) < (other.name, other.gewicht)
+         """
 
 
 def main():
@@ -67,11 +84,13 @@ def main():
     print(obst.name)
     print(obst.zutaten)
     print(repr(obst))
-    #c = Obstsalat("hl", 5) + Obstsalat("bl", 7) + Obstsalat("Banane", 10)
+    c = Obstsalat("hl", 1) + Obstsalat("bl", 2) + Obstsalat("Banane", 10)
     #print(repr(c))
     #print(c.zutaten)
     x = Obstsalat("Banane", 3) + Obstsalat("Apfel", 5) + Obstsalat("Banane", 2)
     print(x.zutaten)
+    lst = sorted([obst, c, x])
+    print(lst)
     
 
 

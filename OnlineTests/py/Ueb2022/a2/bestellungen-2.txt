@@ -1,0 +1,5 @@
+80444;Mayer;41
+30813;Mayer;80
+80444;Zorkel;80
+80444;Powaltschik;6
+30813;Schnorchel;4

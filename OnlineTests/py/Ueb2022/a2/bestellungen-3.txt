@@ -1,0 +1,13 @@
+80444;Mayer;41
+30813;Mayer;80
+59824;Zorkel;80
+30813;Powaltschik;6
+59824;Meier;84
+30813;Mayer;81
+59824;Zorkel;79
+64357;Glosema;9
+90909;Bembel;8
+80444;Mayer;1
+30813;Powaltschik;690
+80444;Hempel;36
+30813;Mayer;8

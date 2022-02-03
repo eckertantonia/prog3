@@ -1,0 +1,19 @@
+80444;Mayer;41
+30813;Mayer;80
+59824;Zorkel;80
+30813;Powaltschik;6
+59824;Meier;84
+30813;Mayer;81
+59824;Huber;79
+64357;Glosema;9
+10883;Arlykkendorf;85
+30813;Schnorchel;4
+59824;Meier;90
+30813;Glogomir;4
+59824;Zorkel;7
+10883;Arlykkendorf;22
+90909;Bembel;8
+80444;von Brabeck;1
+30813;Powaltschik;690
+80444;Hempel;36
+30813;Kattenhuis;8

@@ -1,18 +1,49 @@
 #!/usr/bin/python3
 
+import re
 
 def isHawaiian(w):
     """
     Bitte ergänzen
     """
+    vokale = "AEIOUaeiou"
+    kons = "HKLMNPWhklmnpw\'"
 
+    # Check 1: nur hawaiianisches Alphabet
+    for b in w:
+        if b not in vokale and b not in kons:
+            return False
 
+    # Check 2: endet mit Vokal
+    if w[-1] in kons:
+        return False
+
+    # Check 3: auf Kons folgt Vok
+    for i in range(len(w)):
+        if w[i] in kons:
+            if w[i+1] in kons:
+                return False
+        
+        # Check 4: Silbenende kein Kons: wird mit Check 3 schon getestet
+
+    return True
+    
 
 
 def extractHi(iterable):
     """
     Bitte auch ergänzen
     """
+    ye = []
+    for i in iterable:
+        newI = re.split(r'[^\w+\'\w+]', i)
+        
+        for y in newI:
+            if y != "" and isHawaiian(y):
+                #ye.append(y)
+                yield y
+    #yield ye
+
 
 
 
@@ -22,6 +53,13 @@ def extractHi(iterable):
 
 if __name__ == "__main__":
     import doctest
+
+    w = "Wahine"
+    lst = ["Eine Wahine sagt", "Maika'i no au!"]
+    print(isHawaiian(w))
+    newL = extractHi(lst)
+    for l in newL:
+        print(l)
 
     def test1():
         """

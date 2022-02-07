@@ -1,10 +1,52 @@
 #!/usr/bin/env python3
 
 
+
+from numpy import place
+
+
 def statistik(filename):
     """
     Bitte ergänzen Sie die Funktion gemäß Aufgabenstellung
     """    
+    f = open(filename, "r")
+    content = f.read()
+    lines = content.split('\n')
+    f.close()
+    pL = [] #PLZ und Name
+
+    c = []
+    for l in lines:
+        helper = l.split(';')
+        c.append(helper)
+
+    plzList = []
+    for i in c:
+        if plzList == []:
+            plzList.append([i[0]])
+        elif i[0] in plzList:
+            continue
+        else:
+            plzList.append([i[0]])
+    
+    kList = []
+    for i in plzList:
+        for j in c:
+            if i == [j[0]]:
+                kList.append([j[1]])
+
+        
+            
+                
+    
+
+
+
+
+    
+        
+        
+                
 
 
 
@@ -13,6 +55,8 @@ def statistik(filename):
 
 if __name__ == "__main__":
     import doctest
+
+    statistik("/home/mi/Documents/Sem_5/Prog3/prog3_python/OnlineTests/py/Ueb2022/a2/bestellungen-1.txt")
 
     def test1():
         """
